@@ -1,11 +1,14 @@
 import React from 'react'
+import Form1 from './Form1'
+import Form3 from './Form3'
+import From2 from './From2'
 
 const DashArea = () => {
     return (
-        <div class="flex-grow flex overflow-x-hidden noScroll">
+        <div class="flex-grow flex overflow-x-hidden noScroll ">
 
             {/* side bars */}
-            <div class="w-70 flex-shrink-0 border-r border-gray-200 bg-zinc-800 dark:border-gray-800   lg:block hidden   ">
+            <div class="w-1/6 h-screen overflow-hidden fixed top-10 left-0 flex-shrink-0 border-r border-gray-200 bg-[#262626]   ">
                 <button class="bg-gray-100 w-[90%] text-left  text-black font-bold py-2 m-4 px-4 rounded">
                     <span className='ml-2 text-lg'> +</span> New Item
                 </button>
@@ -194,10 +197,11 @@ const DashArea = () => {
                 </div>
 
 
+
             </div>
 
             {/* right part --------------------------------- */}
-            <div class="flex-grow bg-white ">
+            <div class="ml-[17%] mt-10 bg-white ">
                 {/* navbar  */}
                 <div class="sm:px-7 h-14 px-4   flex flex-col items-center justify-center w-full  border-gray-200 bg-white   dark:text-white dark:border-gray-800  ">
                     <div class="flex w-full items-center">
@@ -225,7 +229,7 @@ const DashArea = () => {
                             {/* <div class="flex"> */}
 
                             <div class="relative w-full">
-                                <input type="search" id="search-dropdown" class="block p-2 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-gray-50 border-l-2 border-gray-300focus:border-blue-500 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white border-2 " placeholder="Search Content ...." required />
+                                <input type="search" id="search-dropdown" class="block p-2 w-full text-sm z text-gray-900 bg-gray-50 rounded-lg border-gray-50 border-l-2 border-gray-300focus:border-blue-500 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white border-2 " placeholder="Search Content ...." required />
                                 <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white rounded-r-lg borderhover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                                     <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                     <span class="sr-only">Search</span>
@@ -240,9 +244,9 @@ const DashArea = () => {
 
                     </div> */}
                 </div>
-                <div class="sm:p-7 h-full w-full p-4 scrollbar-hide bg-black bg-gray-200 ">
+                <div class="sm:p-7 h-full w-full p-4 scrollbar-hide bg-black bg-[#f5f5f5] ">
                     <div className='flex grid mt-3 grid-cols-4 gap-4'>
-                        <div className='rounded-md flex gap-4 p-3 items-center justo m-1 bg-white'>
+                        <div className='rounded-md flex gap-4 p-3 items-center  justo m-1 bg-white'>
 
 
                             <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +258,7 @@ const DashArea = () => {
                             </div>
 
                         </div>
-                        <div className='rounded-md flex gap-4 p-3 items-center justo m-1 bg-white'>
+                        <div className='rounded-md flex gap-4 p-3 items-center  justo m-1 bg-white'>
 
 
                             <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -267,7 +271,7 @@ const DashArea = () => {
                             </div>
 
                         </div>
-                        <div className='rounded-md flex gap-4 p-3 items-center justo m-1 bg-white'>
+                        <div className='rounded-md flex gap-4 p-3 items-center  justo m-1 bg-white'>
 
                             <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.0625 22.9125C24.063 22.0465 24.8654 20.9754 25.4154 19.7719C25.9654 18.5684 26.25 17.2607 26.25 15.9375C26.25 13.4511 25.2623 11.0665 23.5041 9.30837C21.746 7.55022 19.3614 6.5625 16.875 6.5625C14.3886 6.5625 12.004 7.55022 10.2459 9.30837C8.48772 11.0665 7.5 13.4511 7.5 15.9375C7.49999 17.2607 7.78463 18.5684 8.33461 19.7719C8.88459 20.9754 9.68704 22.0465 10.6875 22.9125C8.06276 24.101 5.83587 26.0204 4.27309 28.441C2.7103 30.8617 1.87776 33.6812 1.875 36.5625C1.875 37.0598 2.07254 37.5367 2.42417 37.8883C2.77581 38.24 3.25272 38.4375 3.75 38.4375C4.24728 38.4375 4.72419 38.24 5.07583 37.8883C5.42746 37.5367 5.625 37.0598 5.625 36.5625C5.625 33.5788 6.81026 30.7173 8.92005 28.6075C11.0298 26.4978 13.8913 25.3125 16.875 25.3125C19.8587 25.3125 22.7202 26.4978 24.83 28.6075C26.9397 30.7173 28.125 33.5788 28.125 36.5625C28.125 37.0598 28.3225 37.5367 28.6742 37.8883C29.0258 38.24 29.5027 38.4375 30 38.4375C30.4973 38.4375 30.9742 38.24 31.3258 37.8883C31.6775 37.5367 31.875 37.0598 31.875 36.5625C31.8722 33.6812 31.0397 30.8617 29.4769 28.441C27.9141 26.0204 25.6872 24.101 23.0625 22.9125ZM16.875 21.5625C15.7625 21.5625 14.6749 21.2326 13.7499 20.6145C12.8249 19.9964 12.1039 19.1179 11.6782 18.0901C11.2524 17.0623 11.141 15.9313 11.3581 14.8401C11.5751 13.749 12.1109 12.7467 12.8975 11.96C13.6842 11.1734 14.6865 10.6376 15.7776 10.4206C16.8688 10.2035 17.9998 10.3149 19.0276 10.7407C20.0554 11.1664 20.9339 11.8874 21.552 12.8124C22.1701 13.7374 22.5 14.825 22.5 15.9375C22.5 17.4293 21.9074 18.8601 20.8525 19.915C19.7976 20.9699 18.3668 21.5625 16.875 21.5625ZM35.1375 22.1625C36.3374 20.8112 37.1213 19.142 37.3946 17.3556C37.668 15.5693 37.4192 13.742 36.6783 12.0938C35.9374 10.4455 34.7359 9.04649 33.2184 8.06517C31.7009 7.08384 29.9321 6.56202 28.125 6.5625C27.6277 6.5625 27.1508 6.76004 26.7992 7.11168C26.4475 7.46331 26.25 7.94022 26.25 8.4375C26.25 8.93478 26.4475 9.41169 26.7992 9.76333C27.1508 10.115 27.6277 10.3125 28.125 10.3125C29.6168 10.3125 31.0476 10.9051 32.1025 11.96C33.1574 13.0149 33.75 14.4457 33.75 15.9375C33.7473 16.9223 33.4862 17.8892 32.9926 18.7414C32.4991 19.5936 31.7904 20.3013 30.9375 20.7938C30.6595 20.9541 30.4273 21.1831 30.2632 21.4589C30.099 21.7347 30.0084 22.0479 30 22.3688C29.9922 22.6871 30.0655 23.0021 30.2131 23.2842C30.3607 23.5663 30.5778 23.8062 30.8438 23.9813L31.575 24.4688L31.8187 24.6C34.0789 25.672 35.9856 27.3675 37.3143 29.4868C38.6431 31.6062 39.3385 34.0611 39.3187 36.5625C39.3187 37.0598 39.5163 37.5367 39.8679 37.8883C40.2196 38.24 40.6965 38.4375 41.1937 38.4375C41.691 38.4375 42.1679 38.24 42.5196 37.8883C42.8712 37.5367 43.0687 37.0598 43.0687 36.5625C43.0841 33.6852 42.3634 30.8517 40.9753 28.3314C39.5871 25.811 37.5775 23.6875 35.1375 22.1625Z" fill="#9333ea" />
@@ -279,7 +283,7 @@ const DashArea = () => {
                             </div>
 
                         </div>
-                        <div className='rounded-md flex gap-4 p-3 items-center justo m-1 bg-white'>
+                        <div className='rounded-md flex gap-4 p-3 items-center  justify-center m-1 bg-white'>
 
                             <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.5625 11.25C6.19166 11.25 5.82915 11.36 5.52081 11.566C5.21246 11.772 4.97214 12.0649 4.83023 12.4075C4.68831 12.7501 4.65118 13.1271 4.72353 13.4908C4.79588 13.8545 4.97445 14.1886 5.23668 14.4508C5.4989 14.713 5.83299 14.8916 6.19671 14.964C6.56042 15.0363 6.93742 14.9992 7.28003 14.8573C7.62264 14.7154 7.91548 14.475 8.12151 14.1667C8.32753 13.8584 8.4375 13.4958 8.4375 13.125C8.4375 12.6277 8.23996 12.1508 7.88833 11.7992C7.5367 11.4475 7.05978 11.25 6.5625 11.25ZM14.0625 15H40.3125C40.8098 15 41.2867 14.8025 41.6383 14.4508C41.99 14.0992 42.1875 13.6223 42.1875 13.125C42.1875 12.6277 41.99 12.1508 41.6383 11.7992C41.2867 11.4475 40.8098 11.25 40.3125 11.25H14.0625C13.5652 11.25 13.0883 11.4475 12.7367 11.7992C12.385 12.1508 12.1875 12.6277 12.1875 13.125C12.1875 13.6223 12.385 14.0992 12.7367 14.4508C13.0883 14.8025 13.5652 15 14.0625 15ZM14.0625 20.625C13.6917 20.625 13.3291 20.735 13.0208 20.941C12.7125 21.147 12.4721 21.4399 12.3302 21.7825C12.1883 22.1251 12.1512 22.5021 12.2235 22.8658C12.2959 23.2295 12.4745 23.5636 12.7367 23.8258C12.9989 24.088 13.333 24.2666 13.6967 24.339C14.0604 24.4113 14.4374 24.3742 14.78 24.2323C15.1226 24.0904 15.4155 23.85 15.6215 23.5417C15.8275 23.2334 15.9375 22.8708 15.9375 22.5C15.9375 22.0027 15.74 21.5258 15.3883 21.1742C15.0367 20.8225 14.5598 20.625 14.0625 20.625ZM21.5625 30C21.1917 30 20.8291 30.11 20.5208 30.316C20.2125 30.522 19.9721 30.8149 19.8302 31.1575C19.6883 31.5001 19.6512 31.8771 19.7235 32.2408C19.7959 32.6045 19.9745 32.9386 20.2367 33.2008C20.4989 33.463 20.833 33.6416 21.1967 33.714C21.5604 33.7863 21.9374 33.7492 22.28 33.6073C22.6226 33.4654 22.9155 33.225 23.1215 32.9167C23.3275 32.6084 23.4375 32.2458 23.4375 31.875C23.4375 31.3777 23.24 30.9008 22.8883 30.5492C22.5367 30.1975 22.0598 30 21.5625 30ZM40.3125 20.625H21.5625C21.0652 20.625 20.5883 20.8225 20.2367 21.1742C19.885 21.5258 19.6875 22.0027 19.6875 22.5C19.6875 22.9973 19.885 23.4742 20.2367 23.8258C20.5883 24.1775 21.0652 24.375 21.5625 24.375H40.3125C40.8098 24.375 41.2867 24.1775 41.6383 23.8258C41.99 23.4742 42.1875 22.9973 42.1875 22.5C42.1875 22.0027 41.99 21.5258 41.6383 21.1742C41.2867 20.8225 40.8098 20.625 40.3125 20.625ZM40.3125 30H29.0625C28.5652 30 28.0883 30.1975 27.7367 30.5492C27.385 30.9008 27.1875 31.3777 27.1875 31.875C27.1875 32.3723 27.385 32.8492 27.7367 33.2008C28.0883 33.5525 28.5652 33.75 29.0625 33.75H40.3125C40.8098 33.75 41.2867 33.5525 41.6383 33.2008C41.99 32.8492 42.1875 32.3723 42.1875 31.875C42.1875 31.3777 41.99 30.9008 41.6383 30.5492C41.2867 30.1975 40.8098 30 40.3125 30Z" fill="#9333EA" />
@@ -302,179 +306,12 @@ const DashArea = () => {
 
                     {/* form 1 */}
 
-
-                    <div class="bg-white rounded-md shadow-lg p-4 mx-1 mt-3 px-4 md:p-8 mb-6">
-                        <h2 class="font-semibold text-xl text-gray-900">Form Title</h2>
-                        <p class="text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="bg-red-100 border flex gap-3 border-red-400 text-red-700 px-4 py-2 my-1 rounded relative" role="alert">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 11C11.7348 11 11.4804 11.1054 11.2929 11.2929C11.1054 11.4804 11 11.7348 11 12V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11ZM12.38 7.08C12.1365 6.97998 11.8635 6.97998 11.62 7.08C11.4973 7.12759 11.3851 7.19896 11.29 7.29C11.2017 7.3872 11.1306 7.49882 11.08 7.62C11.024 7.73868 10.9966 7.86882 11 8C10.9992 8.13161 11.0245 8.26207 11.0742 8.38391C11.124 8.50574 11.1973 8.61656 11.29 8.71C11.3872 8.79833 11.4988 8.86936 11.62 8.92C11.7715 8.98224 11.936 9.00632 12.099 8.99011C12.2619 8.97391 12.4184 8.91792 12.5547 8.82707C12.691 8.73622 12.8029 8.61328 12.8805 8.46907C12.9582 8.32486 12.9992 8.16378 13 8C12.9963 7.73523 12.8927 7.48163 12.71 7.29C12.6149 7.19896 12.5028 7.12759 12.38 7.08ZM12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z" fill="#7F1D1D" />
-                            </svg>
-                            <div>
-                                <strong class="font-bold">Holy smokes !</strong>
-                                <span class="block sm:inline"> Something seriously bad happened.</span>
-                            </div>
-
-                        </div>
-                        <div class=" mt-3 w-full">
-                            <div class="shadow overflow-hidden rounded border-b border-gray-200">
-                                <table class="min-w-full bg-white">
-                                    <thead class="bg-gray-800 text-white">
-                                        <tr>
-                                            <th class="w-1/4 text-left py-3 px-4  font-semibold text-sm">Table Title</th>
-                                            <th class="w-1/4 text-left py-3 px-4  font-semibold text-sm">Table Title</th>
-                                            <th class="w-1/4 text-left py-3 px-4  font-semibold text-sm">Table Title</th>
-                                            <th class="w-1/4 text-left py-3 px-4 font-semibold text-sm">Table Title</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-gray-700">
-                                        <tr>
-                                            <td class="w-1/3 text-left py-3 px-4">Lian</td>
-                                            <td class="w-1/3 text-left py-3 px-4">Smith</td>
-                                            <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                            <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                        </tr>
-                                        
-                                        <tr class="bg-gray-100">
-                                            <td class="w-1/3 text-left py-3 px-4">Emma</td>
-                                            <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                                            <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                            <td class="text-left py-3 flex px-4 gap-3">
-                                                <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-1 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Purple</button>
-                                                <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-1 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Purple</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                                            <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                                            <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                            <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                        </tr>
-                                        <tr class="bg-gray-100">
-                                            <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                                            <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                                            <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                            <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="grid gap-4 gap-y-2 text-sm">
-
-                        </div>
-                    </div>
+                    <Form1 />
+                    <Form3 />
+                    <From2 />
 
                     {/* {form 2} */}
-                    <div class="bg-white rounded-md shadow-lg p-4 mx-1 mt-3 px-4 md:p-8 mb-6">
-                        <h2 class="font-semibold text-xl text-gray-900">Form Title</h2>
-                        <p class="text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="m-2 ml-0 gap-3">
-                            <button class="bg-yellow-400 rounded-md border-yellow-600 border-2 gap-2 mr-2 text-gray-800 font-bold py-2 px-4  inline-flex items-center">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_1513_1298)">
-                                        <path d="M0 0H25V25H0V0Z" fill="#012169" />
-                                        <path d="M25 0V3.125L15.7227 12.5L25 21.6309V25H21.7285L12.4023 15.8203L3.32031 25H0V21.6797L9.08203 12.5488L0 3.61328V0H3.02734L12.4023 9.17969L21.4844 0H25Z" fill="white" />
-                                        <path d="M8.98438 15.8203L9.52148 17.4805L2.05078 25H0V24.8535L8.98438 15.8203ZM15.0391 15.2344L17.6758 15.625L25 22.8027V25L15.0391 15.2344ZM25 0L15.625 9.57031L15.4297 7.42188L22.7539 0H25ZM0 0.0488281L9.42383 9.27734L6.54297 8.88672L0 2.39258V0.0488281Z" fill="#C8102E" />
-                                        <path d="M8.59375 0V25H16.4062V0H8.59375ZM0 8.59375V16.4062H25V8.59375H0Z" fill="white" />
-                                        <path d="M0 10.1562V14.8438H25V10.1562H0ZM10.1562 0V25H14.8438V0H10.1562Z" fill="#C8102E" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1513_1298">
-                                            <rect width="25" height="25" rx="3" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
 
-                                <span>English</span>
-                            </button>
-                            <button class="bg-gray-100 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center justify-start gap-2">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_1513_1278)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V25H0V0Z" fill="#E30A17" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0312 12.8906C17.0312 16.3379 14.1846 19.1357 10.6787 19.1357C7.17285 19.1357 4.32617 16.3379 4.32617 12.8857C4.32617 9.43359 7.16797 6.64551 10.6738 6.64551C14.1797 6.64551 17.0361 9.43848 17.0361 12.8906H17.0312Z" fill="white" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3486 12.8906C17.3486 15.6494 15.0732 17.8857 12.2656 17.8857C9.45801 17.8857 7.1875 15.6494 7.1875 12.8906C7.1875 10.1318 9.45801 7.89551 12.2656 7.89551C15.0732 7.89551 17.3438 10.1318 17.3438 12.8906H17.3486Z" fill="#E30A17" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2666 9.9707L18.2178 12.2803L16.0596 12.8662L18.1836 13.623L18.1348 15.7373L19.5166 14.0869L21.6113 14.8096L20.4004 13.0371L21.875 11.2744L19.6094 11.8994L18.2666 9.9707Z" fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1513_1278">
-                                            <rect width="25" height="25" rx="3" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-
-                                <span>Turkish</span>
-                            </button>
-                        </div>
-                        <div class="grid gap-4 gap-y-2 text-sm">
-                            {/* <div class="text-gray-600">
-                                <p class="font-medium text-lg">Personal Details</p>
-                                <p>Please fill out all the fields.</p>
-                            </div> */}
-
-                            <div class="">
-                                <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-6">
-                                    <div class="md:col-span-6">
-                                        <label for="full_name">Label Title</label>
-                                        <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                                    </div>
-                                    {/* 
-                                    <div class="md:col-span-5">
- 
-                                    </div> */}
-
-                                    <div class="md:col-span-2">
-                                        <label for="address">Label Title</label>
-                                        <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="Placeholder content" />
-                                    </div>
-
-                                    <div class="md:col-span-2">
-                                        <label for="city">Label Title</label>
-                                        <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="Placeholder content" />
-                                    </div>
-
-                                    <div class="md:col-span-2">
-                                        <label for="country">Label Title</label>
-                                        <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                            <input name="country" id="country" placeholder="Placeholder content" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-
-                                        </div>
-                                    </div>
-
-                                    <div class="md:col-span-3">
-                                        <label for="state">Label Title</label>
-                                        <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                            <input name="state" id="state" placeholder="Placeholder content" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-
-                                            <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-                                                <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="md:col-span-3">
-                                        <label for="Label Title">Label Title</label>
-                                        <input type="text" name="Label Title" id="Label Title" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="Placeholder content" value="" />
-                                    </div>
-
-
-
-                                    <div class="md:col-span-6">
-                                        <label for="Label Title">Label Title</label>
-
-                                        <textarea required="" name="message" id="" class="w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4" placeholder="Placeholder content" spellcheck="false"></textarea>
-                                    </div>
-
-                                    {/* <div class="md:col-span-6 text-right">
-                                        <div class="inline-flex items-end">
-                                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
-                                        </div>
-                                    </div> */}
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
