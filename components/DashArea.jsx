@@ -244,7 +244,7 @@ const DashArea = () => {
 
                     </div> */}
                 </div>
-                <div class="sm:p-7 h-full w-full p-4 scrollbar-hide bg-black bg-[#f5f5f5] ">
+                <div class="sm:p-7 h-full w-full p-4 scrollbar-hide bg-[#f5f5f5] ">
                     <div className='flex grid mt-3 grid-cols-4 gap-4'>
                         <div className='rounded-md flex gap-4 p-3 items-center  justo m-1 bg-white'>
 
